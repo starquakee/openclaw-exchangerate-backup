@@ -1,0 +1,31 @@
+{
+  "id": "openclaw-exchangerate",
+  "name": "OpenClaw ExchangeRate",
+  "description": "Exchange rate lookup and currency conversion tool powered by ExchangeRate-API.",
+  "providerAuthEnvVars": {
+    "openclaw-exchangerate": ["EXCHANGERATE_API_KEY"]
+  },
+  "uiHints": {
+    "apiKey": {
+      "label": "ExchangeRate-API Key",
+      "help": "API key for ExchangeRate-API requests (fallback: EXCHANGERATE_API_KEY env var).",
+      "sensitive": true
+    },
+    "baseUrl": {
+      "label": "ExchangeRate API Base URL",
+      "help": "Optional ExchangeRate-API base URL override. Defaults to https://v6.exchangerate-api.com/v6."
+    }
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "apiKey": {
+        "type": ["string", "object"]
+      },
+      "baseUrl": {
+        "type": "string"
+      }
+    }
+  }
+}
