@@ -1,0 +1,33 @@
+{
+  "name": "@openclaw/openclaw-exchangerate",
+  "version": "2026.3.23",
+  "description": "OpenClaw ExchangeRate-API plugin",
+  "type": "module",
+  "files": [
+    "index.ts",
+    "openclaw.plugin.json",
+    "README.md",
+    "src/config.ts",
+    "src/exchangerate-client.ts",
+    "src/exchangerate-tool.ts"
+  ],
+  "dependencies": {
+    "@sinclair/typebox": "0.34.48"
+  },
+  "openclaw": {
+    "extensions": [
+      "./index.ts"
+    ],
+    "install": {
+      "npmSpec": "@openclaw/openclaw-exchangerate",
+      "defaultChoice": "npm",
+      "minHostVersion": ">=2026.3.23"
+    },
+    "release": {
+      "publishToNpm": true
+    }
+  },
+  "peerDependencies": {
+    "openclaw": ">=2026.3.23"
+  }
+}
